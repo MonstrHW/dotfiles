@@ -1,0 +1,21 @@
+[user]
+	email = nukolau08@gmail.com
+	name = MonstrHW
+
+[core]
+	editor = nvim
+
+[diff]
+    tool = nvimdiff2
+
+[difftool "nvimdiff2"]
+    cmd = nvim -d $LOCAL $REMOTE
+
+[merge]
+    tool = nvimdiff4
+
+[mergetool "nvimdiff4"]
+    cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[credential]
+	helper = cache

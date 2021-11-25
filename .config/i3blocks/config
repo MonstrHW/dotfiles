@@ -1,0 +1,44 @@
+command=/root/.config/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[kbd]
+interval=1
+command=xset -q | grep LED | awk '{ if (substr ($10,5,1) == 1) print "RU"; else print "EN"; }'
+
+[volume]
+command=./volume
+LABEL=  
+interval=5
+signal=10
+
+[temperature]
+command=./temperature
+label=
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
+
+[cpu_usage]
+command=./cpu_usage
+interval=10
+LABEL=CPU 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+
+[battery2]
+command=./battery2
+markup=pango
+interval=5
+
+[date]
+command=date "+%A %B %d-%m-%Y"
+interval=1
+
+[time]
+command=date "+%H:%M"
+interval=1
+

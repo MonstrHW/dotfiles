@@ -1,0 +1,2 @@
+pulseaudio -D
+exec startx
