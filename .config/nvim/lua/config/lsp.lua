@@ -29,4 +29,4 @@ end
 
 require('config/lsp_lua')
 
-vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil,500)")
+vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil,500)")
