@@ -21,12 +21,12 @@ require('packer').startup(
 			config = function() require('config/lsp') end
 		}
 		use {
-			"hrsh7th/nvim-cmp",
+			'hrsh7th/nvim-cmp',
 			requires = {
-				"hrsh7th/cmp-nvim-lsp",
-				"hrsh7th/cmp-buffer",
-				"hrsh7th/cmp-path",
-				"onsails/lspkind-nvim",
+				'hrsh7th/cmp-nvim-lsp',
+				'hrsh7th/cmp-buffer',
+				'hrsh7th/cmp-path',
+				'onsails/lspkind-nvim',
 			},
 			config = function() require("config/cmp") end,
 		}
