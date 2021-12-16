@@ -41,6 +41,10 @@ require('packer').startup(
 			config = function() vim.cmd [[ colorscheme nvcode ]] end
 		}
 
+		use{
+			'windwp/nvim-autopairs',
+			config = function() require('nvim-autopairs').setup{} end
+		}
 		use 'tpope/vim-surround'
 
 		use 'RRethy/vim-illuminate'
