@@ -16,3 +16,11 @@ require('telescope').setup {
 		}
 	}
 }
+
+function EditConfig()
+	require('telescope.builtin').find_files({
+		prompt_title = "config",
+		shorten_path = false,
+		cwd = "~/.config/nvim",
+	})
+end

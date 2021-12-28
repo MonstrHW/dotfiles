@@ -1,7 +1,7 @@
 vim.g.which_key_use_floating_win = 0
 
 local binds = {
-	['.'] = {'<Cmd>e $MYVIMRC<CR>', 'config'},
+	-- ['.'] = {'<Cmd>e $MYVIMRC<CR>', 'config'},
 	e = {'<Cmd>NvimTreeToggle<CR>', 'file tree'},
 	n = {'<Cmd>nohlsearch<CR>', 'no hl search'},
 	b = {'<Cmd>Telescope buffers<CR>', 'buffers'},
@@ -43,6 +43,7 @@ local binds = {
 		name = '+search',
 		f = {'<Cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>', 'files'},
 		a = {'<Cmd>Telescope live_grep<CR>', 'live search'},
+		c = {'<Cmd>lua EditConfig()<CR>', 'config files'},
 	}
 }
 
