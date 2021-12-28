@@ -91,5 +91,14 @@ require('packer').startup(
 			'lewis6991/gitsigns.nvim',
 			config = function() require('config/gitsigns') end,
 		}
+
+		use {
+			'mfussenegger/nvim-dap',
+			config = function() require('config/dap') end,
+		}
+		use {
+			'rcarriga/nvim-dap-ui',
+			config = function() require("dapui").setup() end
+		}
 	end
 )
