@@ -2,7 +2,7 @@ vim.g.which_key_use_floating_win = 0
 
 local binds = {
 	-- ['.'] = {'<Cmd>e $MYVIMRC<CR>', 'config'},
-	e = {'<Cmd>NvimTreeToggle<CR>', 'file tree'},
+	e = {'<Cmd>NvimTreeFindFileToggle<CR>', 'file tree'},
 	n = {'<Cmd>nohlsearch<CR>', 'no hl search'},
 	b = {'<Cmd>Telescope buffers<CR>', 'buffers'},
 
