@@ -1,6 +1,10 @@
 local map = vim.api.nvim_set_keymap
 local options = {noremap = true, silent = true}
 
+-- Close any window
+map('n', '<C-q>', '<Cmd>lua require("stock").close_any_window()<CR>', options)
+
+
 -- Quicker window movement
 map('n', '<C-h>', '<C-w>h', options)
 map('n', '<C-j>', '<C-w>j', options)
