@@ -24,11 +24,6 @@ map('n', '<C-A-l>', '<Cmd>vertical resize -10<CR>', options)
 map('n', '<C-A-j>', '<Cmd>resize +10<CR>', options)
 map('n', '<C-A-k>', '<Cmd>resize -10<CR>', options)
 
--- Buffer manipulations
-map('n', '<C-n>', '<Cmd>bn<CR>', options)
-map('n', '<C-p>', '<Cmd>bp<CR>', options)
-map('n', '<C-q>', '<Cmd>bw<CR>', options)
-
 -- Tab manipulations
 map('n', '<A-e>', '<Cmd>tabedit<CR>', options)
 map('n', '<A-n>', '<Cmd>tabn<CR>', options)
