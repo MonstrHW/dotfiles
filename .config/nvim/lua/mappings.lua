@@ -36,18 +36,4 @@ map('t', '<C-[>', '<C-\\><C-N>', options)
 -- Save file
 map('', '<C-s>', '<Esc>:w<CR>', options)
 
-function MapMakeCommand()
-	local makeCommands = {
-		['go'] = '<Cmd>!go run *.go<CR>',
-		['py'] = '<Cmd>!python %<CR>',
-	}
-
-	local filetype = vim.fn.expand('%:e')
-
-	if makeCommands[filetype] ~= nil then
-		local buf_map = vim.api.nvim_buf_set_keymap
-		buf_map(0, '', '<Leader>m', makeCommands[filetype], {noremap = true, silent = true})
-	end
-end
-
-vim.cmd('autocmd BufNewFile,BufRead * lua MapMakeCommand()')
+vim.cmd('autocmd BufNewFile,BufRead * lua require("stock").map_make_command()')

@@ -43,7 +43,7 @@ local binds = {
 		name = '+search',
 		f = {'<Cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>', 'files'},
 		a = {'<Cmd>Telescope live_grep<CR>', 'live search'},
-		c = {'<Cmd>lua EditConfig()<CR>', 'config files'},
+		c = {'<Cmd>lua require("stock").search_in_config<CR>', 'config'},
 	}
 }
 
