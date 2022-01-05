@@ -24,7 +24,6 @@ setopt('o', 'ruler', false)
 setopt('o', 'showcmd', true)
 setopt('o', 'swapfile', false)
 setopt('o', 'linebreak', true)
-setopt('o', 'shell', '/bin/zsh')
 
 setopt('o', 'diffopt', 'internal,filler,closeoff,vertical')
 
@@ -38,8 +37,6 @@ setopt('o', 'shortmess', 'Sc')
 
 setopt('o', 'autoread', true)
 
-setopt('o', 'inccommand', 'nosplit')
-
 setopt('wo', 'number', true)
 setopt('wo', 'relativenumber', true)
 setopt('wo', 'signcolumn', 'yes')
@@ -47,3 +44,5 @@ setopt('wo', 'signcolumn', 'yes')
 setopt('o', 'cursorline', true)
 
 setopt('o', 'timeoutlen', 500)
+
+setopt('o', 'keywordprg', ':help')
