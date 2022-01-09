@@ -57,8 +57,7 @@ require('packer').startup(
 		}
 
 		use {
-			'AckslD/nvim-whichkey-setup.lua',
-			requires = {'liuchengxu/vim-which-key'},
+			'folke/which-key.nvim',
 			config = function() require('config/which_key') end,
 		}
 

@@ -1,19 +1,43 @@
-vim.g.which_key_use_floating_win = 0
+local wk = require('which-key')
 
-local binds = {
-	-- ['.'] = {'<Cmd>e $MYVIMRC<CR>', 'config'},
+wk.setup {
+	plugins = {
+		marks = false,
+		registers = false,
+		spelling = {
+			enabled = false,
+		},
+		presets = {
+			operators = false,
+			motions = false,
+			text_objects = false,
+			windows = false,
+			nav = false,
+			z = false,
+			g = false,
+		},
+	},
+	icons = {
+		breadcrumb = '»',
+		separator = '➜',
+		group = '+',
+	},
+	show_help = false,
+}
+
+local maps = {
 	e = {'<Cmd>NvimTreeFindFileToggle<CR>', 'file tree'},
 	n = {'<Cmd>nohlsearch<CR>', 'no hl search'},
 	b = {'<Cmd>Telescope buffers<CR>', 'buffers'},
 
 	a = {
-		name = '+actions',
+		name = 'actions',
 		s = {'<Cmd>set spell!<CR>', 'toggle spell'},
 		w = {'<Cmd>set wrap!<CR>', 'toggle wrap'}
 	},
 
 	l = {
-		name = '+lsp',
+		name = 'lsp',
 		d = {'<Cmd>lua vim.lsp.buf.definition()<CR>', 'definition'},
 		D = {'<Cmd>lua vim.lsp.buf.declaration()<CR>', 'declaration'},
 		t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', 'type definition'},
@@ -24,7 +48,7 @@ local binds = {
 	},
 
 	g = {
-		name = '+git',
+		name = 'git',
 		d = {'<Cmd>Gdiff<CR>', 'h diff'},
 		D = {'<Cmd>Ghdiffsplit<CR>', 'v diff'},
 		s = {'<Cmd>Gstatus<CR>', 'status'},
@@ -47,13 +71,4 @@ local binds = {
 	}
 }
 
-local wk = require('whichkey_setup')
-
-wk.config {
-	hide_statusline = true
-}
-
-wk.register_keymap('leader', binds)
-
-vim.cmd('nnoremap <silent> <leader> :silent WhichKey \'<Space>\'<CR>')
-vim.cmd('vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual \'<Space>\'<CR>')
+wk.register(maps, { prefix = '<Leader>' })
