@@ -64,10 +64,18 @@ local maps = {
 	},
 
 	s = {
-		name = '+search',
+		name = 'search',
 		f = {'<Cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>', 'files'},
 		a = {'<Cmd>Telescope live_grep<CR>', 'live search'},
 		c = {'<Cmd>lua require("stock").search_in_config()<CR>', 'config'},
+	},
+
+	d = {
+		name = 'debug',
+		c = {'<Cmd>lua require"dap".continue()<CR>', 'continue'},
+		s = {'<Cmd>lua require"dap".step_into()<CR>', 'step'},
+		b = {'<Cmd>lua require"dap".toggle_breakpoint()<CR>', 'breakpoint'},
+		B = {'<Cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: ")<CR>', 'breakpoint with condition'}
 	}
 }
 

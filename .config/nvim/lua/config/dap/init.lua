@@ -1,13 +1,11 @@
 require('config/dap/go')
 
+local dap = require("dap")
+local dapui = require("dapui")
 local unique_listener_name = 'dap-config'
-local dap = require('dap')
-dap.listeners.after['launch'][unique_listener_name] = function(session, body)
-	require("dapui").open()
-end
 
-dap.listeners.after['event_terminated'][unique_listener_name] = function(session, body)
-	require("dapui").close()
-end
+dap.listeners.after.event_initialized[unique_listener_name] = function() dapui.open() end
+dap.listeners.before.event_terminated[unique_listener_name] = function() dapui.close() end
+dap.listeners.before.event_exited[unique_listener_name] = function() dapui.close() end
 
 vim.fn.sign_define('DapStopped', {texthl='', linehl='', numhl=''})
