@@ -106,6 +106,11 @@ require('packer').startup(
 				vim.g.XkbSwitchEnabled = 1
 				vim.g.XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
 				vim.g.XkbSwitchIMappings = {'ru'}
+
+				-- Fix for nvim-autopairs
+				vim.g.XkbSwitchSkipIMappings = {
+					['*'] = {'[', ']', '{', '}', "'", '"', '`'}
+				}
 			end
 		}
 	end
