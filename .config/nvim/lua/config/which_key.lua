@@ -75,7 +75,7 @@ local maps = {
 		c = {'<Cmd>lua require"dap".continue()<CR>', 'continue'},
 		s = {'<Cmd>lua require"dap".step_into()<CR>', 'step'},
 		b = {'<Cmd>lua require"dap".toggle_breakpoint()<CR>', 'breakpoint'},
-		B = {'<Cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: ")<CR>', 'breakpoint with condition'}
+		B = {'<Cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', 'breakpoint with condition'}
 	}
 }
 
