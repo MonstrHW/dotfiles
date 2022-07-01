@@ -112,20 +112,10 @@ alias lgd='yadm enter lazygit'
 alias c=clear
 alias q=exit
 
-alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-android_studio()
-{
-	/opt/android-studio/bin/studio.sh &
-	disown
-	exit
-}
-
-#alias android_studio='nohup /opt/android-studio/bin/studio.sh &; exit'
-#alias android_studio=android_studio_alias()
+#alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 bindkey '^ ' autosuggest-accept
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 alias luamake=/tmp/lua-language-server/3rd/luamake/luamake
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
