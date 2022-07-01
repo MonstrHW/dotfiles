@@ -30,6 +30,15 @@ set $ws8 "8:8"
 set $ws9 "9:9"
 set $ws10 "10:10"
 
+set $mainMonitor LVDS-1
+set $secondMonitor HDMI-1
+
+workspace $ws1 output $mainMonitor
+workspace $ws2 output $secondMonitor
+workspace $ws3 output $secondMonitor
+workspace $ws4 output $secondMonitor
+workspace $ws5 output $secondMonitor
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
