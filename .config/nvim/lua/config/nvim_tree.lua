@@ -1,11 +1,20 @@
-vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_disable_window_picker = 1
-
 require'nvim-tree'.setup {
+	view = {
+        relativenumber = true,
+	},
+	renderer = {
+		indent_markers = {
+			enable = true
+		}
+	},
 	git = {
 		enable = false
 	},
-	view = {
-        relativenumber = true,
+	actions = {
+		open_file = {
+			window_picker = {
+				enable = false
+			}
+		}
 	}
 }
