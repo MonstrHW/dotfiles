@@ -67,6 +67,7 @@ local maps = {
 		name = 'search',
 		f = {'<Cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>', 'files'},
 		a = {'<Cmd>Telescope live_grep<CR>', 'live search'},
+		o = {'<Cmd>Telescope oldfiles<CR>', 'old files'},
 		c = {'<Cmd>lua require("stock").search_in_config()<CR>', 'config'},
 	},
 
