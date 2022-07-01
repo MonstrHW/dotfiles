@@ -106,6 +106,8 @@ PS1='%F{39}%d%F{220}# '
 
 alias nv=nvim
 alias r=ranger
+alias lg=lazygit
+alias lgd='yadm enter lazygit'
 
 alias c=clear
 alias q=exit
