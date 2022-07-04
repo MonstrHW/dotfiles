@@ -68,7 +68,7 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Mouse sensivity
-exec --no-startup-id ~/.mouse_sense.bash
+exec --no-startup-id ~/.mouse_sense.sh
 
 # Compositor
 exec --no-startup-id compton -c -b
