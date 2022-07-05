@@ -36,4 +36,9 @@ map('t', '<C-[>', '<C-\\><C-N>', options)
 -- Save file
 map('', '<C-s>', '<Esc>:w<CR>', options)
 
-vim.cmd('autocmd BufNewFile,BufRead * lua require("stock").map_make_command()')
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {
+	pattern = '*',
+	callback = function()
+		require("stock").map_make_command()
+	end
+})
