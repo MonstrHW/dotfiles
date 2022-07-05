@@ -1,51 +1,47 @@
-local function setopt(mode, opt, value)
-	vim[mode][opt] = value
-	if mode ~= 'o' then
-		vim.o[opt] = value
-	end
-end
+local o = vim.opt
+
+o.termguicolors = true
+
+o.tabstop = 4
+o.shiftwidth = 4
+o.autoindent = true
+o.smartindent = true
+o.cindent = true
+o.breakindent = true
+
+o.clipboard = 'unnamedplus'
+o.incsearch = true
+o.ignorecase = true
+o.showmode = false
+o.ruler = false
+o.showcmd = true
+o.swapfile = false
+o.linebreak = true
+
+o.diffopt = {'internal', 'filler', 'closeoff', 'vertical'}
+
+o.spelllang = {'en_us', 'ru'}
+
+o.mouse = 'a'
+o.hidden = true
+o.updatetime = 300
+
+o.shortmess = 'Sc'
+
+o.autoread = true
+
+o.number = true
+o.relativenumber = true
+o.signcolumn = 'yes'
+
+o.cursorline = true
+
+o.timeoutlen = 500
+
+o.keywordprg = ':help'
 
 vim.g.mapleader = ' '
 
-setopt('o', 'termguicolors', true)
-
-setopt('bo', 'tabstop', 4)
-setopt('bo', 'shiftwidth', 4)
-setopt('o', 'autoindent', true)
-setopt('o', 'smartindent', true)
-setopt('o', 'cindent', true)
-setopt('o', 'breakindent', true)
-
-setopt('o', 'clipboard', 'unnamedplus')
-setopt('o', 'incsearch', true)
-setopt('o', 'ignorecase', true)
-setopt('o', 'showmode', false)
-setopt('o', 'ruler', false)
-setopt('o', 'showcmd', true)
-setopt('o', 'swapfile', false)
-setopt('o', 'linebreak', true)
-
-setopt('o', 'diffopt', 'internal,filler,closeoff,vertical')
-
-setopt('o', 'spelllang', 'en_us,ru,uk')
-
-setopt('o', 'mouse', 'a')
-setopt('o', 'hidden', true)
-setopt('o', 'updatetime', 300)
-
-setopt('o', 'shortmess', 'Sc')
-
-setopt('o', 'autoread', true)
-
-setopt('wo', 'number', true)
-setopt('wo', 'relativenumber', true)
-setopt('wo', 'signcolumn', 'yes')
-
-setopt('o', 'cursorline', true)
-
-setopt('o', 'timeoutlen', 500)
-
-setopt('o', 'keywordprg', ':help')
 vim.api.nvim_create_autocmd('FileType', {
 	pattern = 'gitcommit',
 	callback = function()
