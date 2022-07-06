@@ -26,8 +26,6 @@ o.mouse = 'a'
 o.hidden = true
 o.updatetime = 300
 
-o.shortmess = 'Sc'
-
 o.autoread = true
 
 o.number = true
