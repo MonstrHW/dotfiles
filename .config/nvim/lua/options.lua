@@ -4,17 +4,14 @@ o.termguicolors = true
 
 o.tabstop = 4
 o.shiftwidth = 4
-o.autoindent = true
 o.smartindent = true
 o.cindent = true
 o.breakindent = true
 
 o.clipboard = 'unnamedplus'
-o.incsearch = true
 o.ignorecase = true
 o.showmode = false
 o.ruler = false
-o.showcmd = true
 o.swapfile = false
 o.linebreak = true
 
@@ -25,8 +22,6 @@ o.spelllang = {'en_us', 'ru'}
 o.mouse = 'a'
 o.hidden = true
 o.updatetime = 300
-
-o.autoread = true
 
 o.number = true
 o.relativenumber = true
