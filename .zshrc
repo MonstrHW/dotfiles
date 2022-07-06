@@ -105,6 +105,7 @@ export PATH=$PATH:/usr/local/go/bin
 PS1='%F{39}%d%F{220}# '
 
 alias nv=nvim
+alias ranger='. ranger'
 alias r=ranger
 alias lg=lazygit
 
