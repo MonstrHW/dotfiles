@@ -19,19 +19,15 @@ map('n', '<A-l>', '<Cmd>vsp<CR><C-w>l', options)
 map('n', '<A-q>', '<Cmd>close<CR>', options)
 
 -- Resize windows
-map('n', '<C-A-h>', '<Cmd>vertical resize +10<CR>', options)
-map('n', '<C-A-l>', '<Cmd>vertical resize -10<CR>', options)
-map('n', '<C-A-j>', '<Cmd>resize +10<CR>', options)
-map('n', '<C-A-k>', '<Cmd>resize -10<CR>', options)
+map('n', '<C-A-h>', '<Cmd>vertical resize +5<CR>', options)
+map('n', '<C-A-l>', '<Cmd>vertical resize -5<CR>', options)
+map('n', '<C-A-j>', '<Cmd>resize +5<CR>', options)
+map('n', '<C-A-k>', '<Cmd>resize -5<CR>', options)
 
 -- Tab manipulations
 map('n', '<A-e>', '<Cmd>tabedit<CR>', options)
 map('n', '<A-n>', '<Cmd>tabn<CR>', options)
 map('n', '<A-p>', '<Cmd>tabp<CR>', options)
-
--- Terminal manipulations
-map('n', '<A-t>', ':term<CR>i', options)
-map('t', '<C-[>', '<C-\\><C-N>', options)
 
 -- Save file
 map('', '<C-s>', '<Esc>:w<CR>', options)
