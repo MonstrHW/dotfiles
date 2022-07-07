@@ -112,7 +112,7 @@ alias lg=lazygit
 function lgd() {
     cd ~
     yadm enter lazygit
-    cd -
+    cd - > /dev/null
 }
 
 alias c=clear
