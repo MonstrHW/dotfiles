@@ -22,7 +22,7 @@ end
 function M.map_make_command()
 	local make_commands = {
 		['go'] = '<Cmd>!go run *.go<CR>',
-		['py'] = '<Cmd>!python %<CR>',
+		['py'] = '<Cmd>!python3 %<CR>',
 	}
 
 	local file_type = vim.fn.expand('%:e')
