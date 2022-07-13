@@ -4,6 +4,10 @@ end
 
 local lspconfig = require'lspconfig'
 
+if executable('intelephense') then
+	lspconfig.intelephense.setup{}
+end
+
 if executable('pyright') then
 	lspconfig.pyright.setup{}
 end
