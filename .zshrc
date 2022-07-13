@@ -115,6 +115,8 @@ function lgd() {
     cd - > /dev/null
 }
 
+alias lzd=lazydocker
+
 alias c=clear
 alias q=exit
 
