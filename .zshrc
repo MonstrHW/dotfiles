@@ -131,6 +131,8 @@ function lgd() {
 
 alias lzd=lazydocker
 
+alias code='code --no-sandbox --user-data-dir $HOME/vscode'
+
 alias c=clear
 alias q=exit
 
