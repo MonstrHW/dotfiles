@@ -102,6 +102,11 @@ export VISUAL=nvim
 
 export PATH=$PATH:/usr/local/go/bin
 
+precmd()
+{
+	pwd > /root/.whereami
+}
+
 PS1='%F{39}%d%F{220}# '
 
 alias nv=nvim
