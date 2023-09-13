@@ -141,3 +141,4 @@ bindkey '^ ' autosuggest-accept
 alias luamake=/tmp/lua-language-server/3rd/luamake/luamake
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init zsh)"
