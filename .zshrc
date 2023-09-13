@@ -114,6 +114,15 @@ alias ranger='. ranger'
 alias r=ranger
 alias lg=lazygit
 
+alias gs="git status"
+alias gl="git log --oneline --graph"
+alias gla="git log --oneline --graph --all"
+alias gd="git diff"
+alias gc="git checkout"
+alias gcc="git checkout -b"
+alias gb="git branch -vv"
+
+
 function lgd() {
     cd ~
     yadm enter lazygit
