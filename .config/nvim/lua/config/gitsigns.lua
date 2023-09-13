@@ -10,10 +10,10 @@ require('gitsigns').setup {
 	numhl = false,
 	linehl = false,
 
-	keymaps = {
-		noremap = true,
-		buffer = true,
-	},
+--	keymaps = {
+--		noremap = true,
+--		buffer = true,
+--	},
 
 	sign_priority = 6,
 	update_debounce = 200,
