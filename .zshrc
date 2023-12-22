@@ -136,6 +136,8 @@ alias code='code --no-sandbox --user-data-dir $HOME/vscode'
 alias c=clear
 alias q=exit
 
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
 #alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 bindkey '^ ' autosuggest-accept
