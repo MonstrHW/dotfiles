@@ -41,8 +41,8 @@ require('packer').startup(
 			run = ':TSUpdate'
 		}
 		use {
-			'christianchiarulli/nvcode-color-schemes.vim',
-			config = function() vim.cmd [[ colorscheme nvcode ]] end
+			'Mofiqul/vscode.nvim',
+			config = function() require('vscode').load() end
 		}
 
 		use{
