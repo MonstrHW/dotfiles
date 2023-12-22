@@ -6,7 +6,7 @@ pulseaudio -D &
 
 compton -c -b &
 
-feh --bg-scale `cat ~/.bgimage` &
+~/.bgimage.sh &
 
 # invoke global X session script
 . /etc/X11/Xsession

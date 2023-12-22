@@ -1,5 +1,7 @@
 local o = vim.opt
 
+o.background = 'light'
+
 o.termguicolors = true
 
 o.tabstop = 4

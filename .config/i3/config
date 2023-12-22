@@ -61,7 +61,7 @@ bindsym $mod+q kill
 bindsym $mod+Tab workspace back_and_forth
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -76,6 +76,9 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# Switch color scheme
+bindsym $mod+Shift+s exec ~/.color_scheme_switcher.sh
 
 #exec --no-startup-id i3-msg 'workspace 1; exec google-chrome-stable; workspace 2; exec i3-sensible-terminal; workspace 3; exec telegram; workspace 4; exec google-chrome-stable; workspace 1'
 
@@ -175,15 +178,4 @@ smart_borders on
 gaps inner 10
 gaps outer 10
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar
-{
-	colors 
-	{
-		background #1e1e1e
-	}
-
-	position top
-	status_command i3blocks
-}
+include ./light.conf
