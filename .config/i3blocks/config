@@ -34,6 +34,11 @@ command=./battery2
 markup=pango
 interval=5
 
+[combined_login_time]
+command=login_history -s today | grep -oP '\(\K\d{2}:\d{2}'
+label=⚒ 
+interval=60
+
 [date]
 command=date "+%A %B %d-%m-%Y"
 interval=1
