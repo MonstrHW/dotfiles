@@ -2,7 +2,7 @@
 
 BGIMAGE="${HOME}/.bgimage.sh"
 I3CONF="${HOME}/.config/i3/config"
-ALACRITTYCONF="${HOME}/.config/alacritty/alacritty.yml"
+ALACRITTYCONF="${HOME}/.config/alacritty/alacritty.toml"
 NEOVIMCONF="${HOME}/.config/nvim/lua/options.lua"
 
 CURRENT_MODE=`gsettings get org.gnome.desktop.interface color-scheme`
